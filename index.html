@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALARD University Pune - Design Programs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="horizontal-sections" id="scrollContainer">
+
+    <!-- Section 1 -->
+    <div class="section bg-white-200 section-1" id="section-1">
+
+
+      <div class="info part-1">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo">
+        </div>
+
+        <h2>DREAM TO BE A DESIGNER</h2>
+
+        <p>ALARD University Pune stands out for its innovative educational model, emphasizing 70% practical learning and
+          30% theory, ensuring graduates are well-prepared for real-world challenges.</p>
+
+        <a href="#section-2">
+          <div class="btn">
+            <button>></button>
+            <span>Explore More</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="part-2">
+        <div class="sec-1">
+          <button id="openModalBtn" onclick="openModalBtn()">Enquire Now</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="leadModal" class="modal" style="display:none;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="images/header-logo.png" alt="Logo">
+              <span id="closeModalBtn" onclick="closeModalBtn()" class="close">&times;</span>
+            </div>
+            <form id="lead-form" class="space-y-4 p-8 bg-white shadow-md rounded-lg"
+              style="padding: 3% !important; border-color: rgb(227, 179, 74);">
+              <input type="text" placeholder="Name"
+                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required
+                style="border-color: rgb(227, 179, 74);">
+              <input type="tel" placeholder="Phone"
+                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required
+                style="border-color: rgb(227, 179, 74);">
+              <input type="email" placeholder="Email"
+                class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required
+                style="border-color: rgb(227, 179, 74);">
+              <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required style="border-color: rgb(227, 179, 74);">
+                <option value="" disabled selected>Level</option>
+                <option>Undergraduate</option>
+                <option>Postgraduate</option>
+              </select>
+              <select
+                class="choices w-full p-2 border bg-orange-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required style="border-color: rgb(227, 179, 74);">
+                <option value="" disabled selected>Stream</option>
+                <option>Engineering</option>
+                <option>Arts</option>
+                <option>Science</option>
+              </select>
+              <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required style="border-color: rgb(227, 179, 74);">
+                <option value="" disabled selected>State</option>
+                <option>Andaman and Nicobar</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+              </select>
+              <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required style="border-color: rgb(227, 179, 74);">
+                <option value="" disabled selected>City</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Bangalore</option>
+              </select>
+              <div class="flex items-center">
+                <input type="checkbox" id="consent" class="mr-2" required>
+                <label for="consent" class="text-gray-700">I agree to receive information regarding my submitted
+                  application by signing up on ALARD University Pune.</label>
+              </div>
+              <button type="submit" class="w-full p-3 text-white rounded"
+                style="background-color: #4B1D3A;">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="sec-2">
+          <a href="#section-2">
+            <button>></button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section bg-white-200 section-2" id="section-2">
+
+      <div class="header"><span>PRO</span>
+
+        <div class="logo-container">
+          <div class="text-rotating">
+            <svg viewBox="0 0 200 200">
+              <!-- Path for text -->
+              <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+              <!-- Text along the path -->
+              <text fill="#4b1d3a" font-size="14" font-family="Arial, sans-serif">
+                <textPath href="#circlePath" text-anchor="middle" startOffset="75%">
+                  ALARD School of Design Pune
+                </textPath>
+                <textPath href="#circlePath" text-anchor="middle" startOffset="25%">
+                  ALARD School of Design Pune
+                </textPath>
+              </text>
+            </svg>
+            <div class="center-image">
+              <img src="images/header-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+
+        <span>GRAMS</span>
+
+      </div>
+
+      <div class="container">
+
+        <div class="part-1">
+          <div class="logo">
+            <img src="images/logo.png" alt="logo">
+          </div>
+
+          <div class="roles">
+            <ul>
+              <li> <button class="li-btn">></button> B.Des in Communication Design</li>
+              <li> <button class="li-btn">></button> B.Des in UI/UX Design</li>
+              <li> <button class="li-btn">></button> B.Des in Game Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="part-2">
+          <a href="#section-1">
+            <button>
+              < </button>
+          </a>
+          <a href="#section-3">
+            <button>></button>
+          </a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section bg-white-200 section-3" id="section-3">
+      <div class="header"><span>Communi</span>
+
+        <div class="logo-container">
+          <div class="text-rotating">
+            <svg viewBox="0 0 200 200">
+              <!-- Path for text -->
+              <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+              <!-- Text along the path -->
+              <text fill="#4b1d3a" font-size="14" font-family="Arial, sans-serif">
+                <textPath href="#circlePath" text-anchor="middle" startOffset="75%">
+                  ALARD School of Design Pune
+                </textPath>
+                <textPath href="#circlePath" text-anchor="middle" startOffset="25%">
+                  ALARD School of Design Pune
+                </textPath>
+              </text>
+            </svg>
+            <div class="center-image">
+              <img src="images/header-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+
+        <span>cation</span>
+
+      </div>
+
+      <div class="container">
+
+        <div class="part-1">
+          <h2>
+            B.Des in Communication Design
+          </h2>
+
+          <div class="infor">
+            <p class="font-normal leading-relaxed mx-auto text-slate-600 lg:text-lg text-base max-w-3xl" style="font-family: Inter, Sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5em;
+            color: #545454;">
+              The Bachelor of Design (B.Des) program is a dynamic undergraduate degree crafted to inspire creativity and
+              nurture talent in design domains.
+
+              This program provides the perfect platform to launch a career where creativity meets purpose, opening
+              doors to diverse opportunities in the evolving world of design. Unlock your potential and shape the future
+              of design with B.Des at Alard University.
+            </p>
+          </div>
+
+          <div class="accordian">
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Eligibility Criteria</span>
+                <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                  <ul style="font-family: Inter, Sans-serif;
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 1.5em;
+                  color: #000000;">
+                    <li>&bull; Candidates must have passed 10+2 with at least 55% aggregate marks (for Open category)
+                      and 50% aggregate marks (for Reserved category) with any stream.
+                    </li>
+                    <li>
+                      &bull; Candidate must have positive score in any of this UCEED/ NIFT/ NID DAT/ AIEED/CUET/ FDDI
+                      AIST/ AEST Entrance Test.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Specialization</span>
+                <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500" style="font-family: Inter, Sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #000000;">
+                  &bull; Communication Design
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Duration</span>
+                <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500" style="font-family: Inter, Sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #000000;">
+                  &bull; 4 Years
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="e-btn">
+            <button style="
+            background-color: #4B1D3A;
+            border-radius: 3px;
+            color: #fff;
+            display: inline-block;
+            font-size: 15px;
+            line-height: 1;
+            padding: 12px 24px;
+            fill: #fff;
+            text-align: center;
+            transition: all .3s;" onclick="openModalBtn()">
+              Enquire Now
+            </button>
+          </div>
+
+        </div>
+
+        <div class="part-2">
+          <a href="#section-1">
+            <button>
+              < </button>
+          </a>
+          <a href="#section-3">
+            <button>></button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section bg-white-200 section-3" id="section-4">
+      <div class="header"><span>UI/UX</span>
+
+        <div class="logo-container">
+          <div class="text-rotating">
+            <svg viewBox="0 0 200 200">
+              <!-- Path for text -->
+              <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+              <!-- Text along the path -->
+              <text fill="#4b1d3a" font-size="14" font-family="Arial, sans-serif">
+                <textPath href="#circlePath" text-anchor="middle" startOffset="75%">
+                  ALARD School of Design Pune
+                </textPath>
+                <textPath href="#circlePath" text-anchor="middle" startOffset="25%">
+                  ALARD School of Design Pune
+                </textPath>
+              </text>
+            </svg>
+            <div class="center-image">
+              <img src="images/header-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+
+        <span>Design</span>
+
+      </div>
+
+      <div class="container">
+
+        <div class="part-1">
+          <h2>
+            B.Des in UI/UX Design
+          </h2>
+
+          <div class="infor">
+            <p class="font-normal leading-relaxed mx-auto text-slate-600 lg:text-lg text-base max-w-3xl" style="font-family: Inter, Sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5em;
+            color: #545454;">
+              The Bachelor of Design (B.Des) program is a dynamic undergraduate degree crafted to inspire creativity and
+              nurture talent in design domains. <br>
+
+              This program provides the perfect platform to launch a career where creativity meets purpose, opening
+              doors to diverse opportunities in the evolving world of design. Unlock your potential and shape the future
+              of design with B.Des at Alard University.
+            </p>
+          </div>
+
+          <div class="accordian">
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion1(1)"
+                class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Eligibility Criteria</span>
+                <span id="icon1-1" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content1-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                  <ul style="font-family: Inter, Sans-serif;
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 1.5em;
+                  color: #000000;">
+                    <li>&bull; Candidates must have passed 10+2 with at least 55% aggregate marks (for Open category)
+                      and 50% aggregate marks (for Reserved category) with any stream.
+                    </li>
+                    <li>
+                      &bull; Candidate must have positive score in any of this UCEED/ NIFT/ NID DAT/ AIEED/CUET/ FDDI
+                      AIST/ AEST Entrance Test.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion1(2)"
+                class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Specialization</span>
+                <span id="icon1-2" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content1-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500" style="font-family: Inter, Sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #000000;">
+                  &bull; UI/UX Design
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion1(3)"
+                class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Duration</span>
+                <span id="icon1-3" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content1-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500" style="font-family: Inter, Sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #000000;">
+                  &bull; 4 Years
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="e-btn">
+            <button style="
+            background-color: #4B1D3A;
+            border-radius: 3px;
+            color: #fff;
+            display: inline-block;
+            font-size: 15px;
+            line-height: 1;
+            padding: 12px 24px;
+            fill: #fff;
+            text-align: center;
+            transition: all .3s;" onclick="openModalBtn()">
+              Enquire Now
+            </button>
+          </div>
+
+        </div>
+
+        <div class="part-2">
+          <a href="#section-1">
+            <button>
+              < </button>
+          </a>
+          <a href="#section-3">
+            <button>></button>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section bg-white-200 section-3" id="section-5">
+
+      <div class="header"><span>Game</span>
+
+        <div class="logo-container">
+          <div class="text-rotating">
+            <svg viewBox="0 0 200 200">
+              <!-- Path for text -->
+              <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+              <!-- Text along the path -->
+              <text fill="#4b1d3a" font-size="14" font-family="Arial, sans-serif">
+                <textPath href="#circlePath" text-anchor="middle" startOffset="75%">
+                  ALARD School of Design Pune
+                </textPath>
+                <textPath href="#circlePath" text-anchor="middle" startOffset="25%">
+                  ALARD School of Design Pune
+                </textPath>
+              </text>
+            </svg>
+            <div class="center-image">
+              <img src="images/header-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+
+        <span>Design</span>
+
+      </div>
+
+      <div class="container">
+
+        <div class="part-1">
+          <h2>
+            B.Des in Game Design
+          </h2>
+
+          <div class="infor">
+            <p class="font-normal leading-relaxed mx-auto text-slate-600 lg:text-lg text-base max-w-3xl" style="font-family: Inter, Sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5em;
+            color: #545454;">
+              The Bachelor of Design (B.Des) program is a dynamic undergraduate degree crafted to inspire creativity and
+              nurture talent in design domains. <br>
+
+              This program provides the perfect platform to launch a career where creativity meets purpose, opening
+              doors to diverse opportunities in the evolving world of design. Unlock your potential and shape the future
+              of design with B.Des at Alard University.
+            </p>
+          </div>
+
+          <div class="accordian">
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion2(1)"
+                class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Eligibility Criteria</span>
+                <span id="icon2-1" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content2-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500">
+                  <ul style="font-family: Inter, Sans-serif;
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 1.5em;
+                  color: #000000;">
+                    <li>&bull; Candidates must have passed 10+2 with at least 55% aggregate marks (for Open category)
+                      and 50% aggregate marks (for Reserved category) with any stream.
+                    </li>
+                    <li>
+                      &bull; Candidate must have positive score in any of this UCEED/ NIFT/ NID DAT/ AIEED/CUET/ FDDI
+                      AIST/ AEST Entrance Test.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion2(2)"
+                class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Specialization</span>
+                <span id="icon2-2" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content2-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500" style="font-family: Inter, Sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #000000;">
+                  &bull; Game Design
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="border-b border-slate-200">
+              <button onclick="toggleAccordion2(3)"
+                class="w-full flex justify-between items-center py-5 text-slate-800">
+                <span>Duration</span>
+                <span id="icon2-3" class="text-slate-800 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd"
+                      d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+              </button>
+              <div id="content2-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pb-5 text-sm text-slate-500" style="font-family: Inter, Sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.5em;
+                color: #000000;">
+                  &bull; 4 Years
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="e-btn">
+            <button style="
+            background-color: #4B1D3A;
+            border-radius: 3px;
+            color: #fff;
+            display: inline-block;
+            font-size: 15px;
+            line-height: 1;
+            padding: 12px 24px;
+            fill: #fff;
+            text-align: center;
+            transition: all .3s;" onclick="openModalBtn()">
+              Enquire Now
+            </button>
+          </div>
+
+        </div>
+
+        <div class="part-2">
+          <a href="#section-4">
+            <button>
+              < </button>
+          </a>
+          <a href="#section-6">
+            <button>></button>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section bg-white-200 section-6" id="section-6">
+
+      <div class="header"><span>About</span>
+
+        <div class="logo-container">
+          <div class="text-rotating">
+            <svg viewBox="0 0 200 200">
+              <!-- Path for text -->
+              <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+              <!-- Text along the path -->
+              <text fill="#4b1d3a" font-size="14" font-family="Arial, sans-serif">
+                <textPath href="#circlePath" text-anchor="middle" startOffset="75%">
+                  ALARD School of Design Pune
+                </textPath>
+                <textPath href="#circlePath" text-anchor="middle" startOffset="25%">
+                  ALARD School of Design Pune
+                </textPath>
+              </text>
+            </svg>
+            <div class="center-image">
+              <img src="images/header-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+
+        <span>AUP</span>
+
+      </div>
+
+      <div class="container">
+        <div class="part-1">
+
+          <div class="sec-1  mx-auto flex justify-center items-center">
+            <div class="relative w-full shadow-lg" style="height: 100%; width: 100%; border-radius: 1rem;">
+              <!-- Video -->
+              <video id="video" class="w-full h-full object-cover cursor-pointer"
+                style="height: 100%; width: 100%; border-radius: 1rem;">
+                <source
+                  src="https://design.alarduniversity.edu.in/wp-content/uploads/2024/12/ALard-University-Pune-full-video.mp4"
+                  type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Play Button -->
+              <img id="play-button"
+                src="https://design.alarduniversity.edu.in/wp-content/uploads/2024/12/play-button.png" alt="Play Button"
+                class="absolute inset-0 m-auto w-16 h-16 cursor-pointer">
+            </div>
+          </div>
+
+          <div class="sec-2">
+            <p class="font-normal leading-relaxed mx-auto text-slate-500 lg:text-lg text-base max-w-3xl text-justify">
+              ALARD University Pune, a legacy that spans a generation, is more than just a university. It is where
+              dreams become reality, pupils become pioneers, and success stands at the precipice of hard work. Our
+              acronym ALARD stands for Attitude, Leadership, Alertness, Readiness, and Dedication. Founded in 1999 under
+              the visionary leadership of Dr. L. R. Yadav, the mission was to sow seeds of knowledge and skill in
+              students' minds, fostering entrepreneurship to enrich the lives and careers of youth, thus becoming a
+              catalyst for change in both individual lives and society.
+              <br><br>
+              ALARD University Pune is now synonymous with quality education in the country, which curates and nurtures
+              future professionals to lead the nation. It has emerged as one of Pune's most esteemed universities and is
+              now looking to reach the world with an advanced and efficient learning model.
+            </p>
+          </div>
+
+
+        </div>
+
+        <div class="part-2">
+          <a href="#section-5">
+            <button>
+              < </button>
+          </a>
+          <a href="#section-7">
+            <button>></button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Section 7 (Contact Form) -->
+    <div class="section bg-white-200 section-6" id="section-7">
+      <div class="header"><span>Enquire</span>
+        <div class="logo-container">
+          <div class="text-rotating">
+            <svg viewBox="0 0 200 200">
+              <!-- Path for text -->
+              <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"></path>
+              <!-- Text along the path -->
+              <text fill="#4b1d3a" font-size="14" font-family="Arial, sans-serif">
+                <textPath href="#circlePath" text-anchor="middle" startOffset="75%">
+                  ALARD School of Design Pune
+                </textPath>
+                <textPath href="#circlePath" text-anchor="middle" startOffset="25%">
+                  ALARD School of Design Pune
+                </textPath>
+              </text>
+            </svg>
+            <div class="center-image">
+              <img src="images/header-logo.png" alt="logo">
+            </div>
+          </div>
+        </div>
+        <span>Now</span>
+      </div>
+
+      <div class="container">
+        <div class="part-1 flex flex-col sm:flex-row">
+          <!-- sec-1 part only shown on larger screens -->
+          <div class="sec-1 mx-auto flex justify-center items-center sm:block hidden">
+          </div>
+
+          <div class="sec-2">
+            <div class="info">
+              <h1 class="text-center text-2xl mb-6"
+                style="font-family: Poppins, Sans-serif; font-size: 40px; font-weight: 800; text-transform: uppercase; color: #4B1D3A;">
+                Enquire Now
+              </h1>
+
+              <form id="lead-form" class="space-y-4 p-8 bg-white shadow-md rounded-lg" style="padding: 3% !important;">
+                <input type="text" placeholder="Name"
+                  class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <input type="tel" placeholder="Phone"
+                  class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <input type="email" placeholder="Email"
+                  class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+
+                <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  style="border-color: rgb(227, 179, 74);" required>
+                  <option value="" disabled selected>Level</option>
+                  <option>Undergraduate</option>
+                  <option>Postgraduate</option>
+                </select>
+
+                <select
+                  class="choices w-full p-2 border bg-orange-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  required>
+                  <option value="" disabled selected>Stream</option>
+                  <option>Engineering</option>
+                  <option>Arts</option>
+                  <option>Science</option>
+                </select>
+
+                <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  required>
+                  <option value="" disabled selected>State</option>
+                  <option>Andaman and Nicobar</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                </select>
+
+                <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  required>
+                  <option value="" disabled selected>City</option>
+                  <option>Delhi</option>
+                  <option>Mumbai</option>
+                  <option>Bangalore</option>
+                </select>
+
+                <div class="flex items-center">
+                  <input type="checkbox" id="consent" class="mr-2" required>
+                  <label for="consent" class="text-gray-700">I agree to receive information regarding my submitted
+                    application by signing up on ALARD University Pune.</label>
+                </div>
+
+                <!-- <div id="recaptcha_checkbox" class="g-recaptcha" data-callback="recaptcha_callback_cbox"
+              data-theme="light" data-sitekey="6LcX3JUpAAAAALbajv-FCicNH_kH5YorG5uBc1q9">
+              <div style="width: 304px; height: 78px;">
+                <div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-uv6908qyitwv"
+                    frameborder="0" scrolling="no"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                    src="https://www.recaptcha.net/recaptcha/api2/anchor?ar=2&amp;k=6LcX3JUpAAAAALbajv-FCicNH_kH5YorG5uBc1q9&amp;co=aHR0cHM6Ly9mb3Jtcy56b2hvcHVibGljLmluOjQ0Mw..&amp;hl=en&amp;v=zIriijn3uj5Vpknvt_LnfNbF&amp;theme=light&amp;size=normal&amp;cb=risvvgf2av67"></iframe>
+                </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+              </div><iframe style="display: none;"></iframe>
+            </div> -->
+
+                <button type="submit" class="w-full p-3 text-white rounded"
+                  style="background-color: #4B1D3A;">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="part-2">
+          <a href="#section-6">
+            <button>
+              < </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="scrollTracker" class="scroll-tracker"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</body>
+
+</html>
