@@ -781,66 +781,45 @@
               </h1>
 
               <form id="lead-form" class="space-y-4 p-8 bg-white shadow-md rounded-lg" style="padding: 3% !important;">
-                <input type="text" placeholder="Name"
-                  class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-                <input type="tel" placeholder="Phone"
-                  class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-                <input type="email" placeholder="Email"
-                  class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-
-                <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  style="border-color: rgb(227, 179, 74);" required>
+                <input type="text" name="name" placeholder="Name" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <input type="tel" name="phone" placeholder="Phone" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                <input type="email" name="email" placeholder="Email" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+              
+                <select name="level" class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
                   <option value="" disabled selected>Level</option>
-                  <option>Undergraduate</option>
-                  <option>Postgraduate</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
                 </select>
-
-                <select
-                  class="choices w-full p-2 border bg-orange-700 rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required>
+              
+                <select name="stream" class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
                   <option value="" disabled selected>Stream</option>
-                  <option>Engineering</option>
-                  <option>Arts</option>
-                  <option>Science</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Arts">Arts</option>
+                  <option value="Science">Science</option>
                 </select>
-
-                <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required>
+              
+                <select name="state" class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
                   <option value="" disabled selected>State</option>
-                  <option>Andaman and Nicobar</option>
-                  <option>Andhra Pradesh</option>
-                  <option>Arunachal Pradesh</option>
+                  <option value="Andaman and Nicobar">Andaman and Nicobar</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                 </select>
-
-                <select class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  required>
+              
+                <select name="city" class="choices w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
                   <option value="" disabled selected>City</option>
-                  <option>Delhi</option>
-                  <option>Mumbai</option>
-                  <option>Bangalore</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Bangalore">Bangalore</option>
                 </select>
-
+              
                 <div class="flex items-center">
                   <input type="checkbox" id="consent" class="mr-2" required>
-                  <label for="consent" class="text-gray-700">I agree to receive information regarding my submitted
-                    application by signing up on ALARD University Pune.</label>
+                  <label for="consent" class="text-gray-700">I agree to receive information regarding my submitted application by signing up on ALARD University Pune.</label>
                 </div>
-
-                <!-- <div id="recaptcha_checkbox" class="g-recaptcha" data-callback="recaptcha_callback_cbox"
-              data-theme="light" data-sitekey="6LcX3JUpAAAAALbajv-FCicNH_kH5YorG5uBc1q9">
-              <div style="width: 304px; height: 78px;">
-                <div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-uv6908qyitwv"
-                    frameborder="0" scrolling="no"
-                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                    src="https://www.recaptcha.net/recaptcha/api2/anchor?ar=2&amp;k=6LcX3JUpAAAAALbajv-FCicNH_kH5YorG5uBc1q9&amp;co=aHR0cHM6Ly9mb3Jtcy56b2hvcHVibGljLmluOjQ0Mw..&amp;hl=en&amp;v=zIriijn3uj5Vpknvt_LnfNbF&amp;theme=light&amp;size=normal&amp;cb=risvvgf2av67"></iframe>
-                </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
-                  style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-              </div><iframe style="display: none;"></iframe>
-            </div> -->
-
-                <button type="submit" class="w-full p-3 text-white rounded"
-                  style="background-color: #4B1D3A;">Submit</button>
+              
+                <button type="submit" class="w-full p-3 text-white rounded" style="background-color: #4B1D3A;">Submit</button>
               </form>
+              
             </div>
           </div>
         </div>
