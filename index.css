@@ -849,6 +849,18 @@ select {
     width: 100vw;
   }
 
+  .section-6{
+    width: 200vw;
+  }
+
+  .section-6 .container {
+    width: 200vw;
+    flex-wrap: nowrap;
+  }
+  .section-3 .container .part-1 {
+    width: 150vw;
+  }
+
 
 
   #section-7 .container{
@@ -860,11 +872,13 @@ select {
 
   #section-7 .container .part-1{
     padding-left: 2%;
+    width: 100vw;
   }
 
   #section-7 .container .part-1 .sec-1{
     display: none;
   }
+
   #section-7 .container .part-1 .sec-2{
     width: 50%;
     margin-left: 2rem;
