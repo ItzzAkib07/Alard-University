@@ -31,37 +31,68 @@ function populateUTMParametersInForm() {
   }
 }
 
+// Handle form submission
 document.addEventListener('DOMContentLoaded', () => {
-  // Store UTM parameters
   storeUTMParameters();
-
-  // Populate UTM parameters into the form
   populateUTMParametersInForm();
 
-  // Handle form submission
   const form = document.getElementById('lead-form');
   form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent actual form submission
+    event.preventDefault();
 
-    // Collect form data
     const formData = new FormData(form);
     const data = {};
     formData.forEach((value, key) => {
       data[key] = value;
     });
 
-    // Merge with UTM parameters
     const utmParams = JSON.parse(localStorage.getItem('utmParams') || '{}');
     const finalData = { ...data, ...utmParams };
 
-    // Store form data in localStorage
     localStorage.setItem('formData', JSON.stringify(finalData));
-
-    // Display confirmation alert
     alert('Form submitted successfully!');
-
-    // Reset the form
     form.reset();
+  });
+
+  // Horizontal scroll handling for desktop and mobile
+  const scrollContainer = document.getElementById('scrollContainer');
+
+  // For desktop (wheel event)
+  scrollContainer.addEventListener('wheel', (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault();
+      scrollContainer.scrollBy({
+        left: e.deltaY > 0 ? 100 : -100,
+        behavior: 'smooth',
+      });
+    }
+  });
+
+  // For mobile (touch events)
+  let startX;
+  scrollContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  scrollContainer.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    const deltaX = startX - touch.clientX;
+
+    scrollContainer.scrollBy({
+      left: deltaX,
+      behavior: 'smooth',
+    });
+
+    startX = touch.clientX;
+  });
+
+  // Scroll tracker
+  const scrollTracker = document.getElementById('scrollTracker');
+  const totalWidth = scrollContainer.scrollWidth - window.innerWidth;
+  scrollContainer.addEventListener('scroll', () => {
+    const currentScroll = scrollContainer.scrollLeft;
+    const scrollPercentage = (currentScroll / totalWidth) * 100;
+    scrollTracker.style.width = `${scrollPercentage}%`;
   });
 });
 
