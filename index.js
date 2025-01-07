@@ -7,86 +7,113 @@ function getUTMParameters() {
       utmParams[param] = params.get(param);
     }
   });
+  console.log('Parsed UTM Parameters:', utmParams); // Debugging log
   return utmParams;
 }
 
 // Store UTM parameters in localStorage
 function storeUTMParameters() {
-  const utmParams = getUTMParameters();
-  if (Object.keys(utmParams).length > 0) {
-    localStorage.setItem('utmParams', JSON.stringify(utmParams));
+  try {
+    const utmParams = getUTMParameters();
+    if (Object.keys(utmParams).length > 0) {
+      localStorage.setItem('utmParams', JSON.stringify(utmParams));
+      console.log('UTM Parameters stored in localStorage.');
+    }
+  } catch (error) {
+    console.error('Error storing UTM parameters in localStorage:', error);
   }
 }
 
 // Populate UTM parameters into the form
 function populateUTMParametersInForm() {
-  const utmParams = JSON.parse(localStorage.getItem('utmParams') || '{}');
-  const form = document.getElementById('lead-form');
-  for (const [key, value] of Object.entries(utmParams)) {
-    const hiddenInput = document.createElement('input');
-    hiddenInput.type = 'hidden';
-    hiddenInput.name = key;
-    hiddenInput.value = value;
-    form.appendChild(hiddenInput);
+  try {
+    const utmParams = JSON.parse(localStorage.getItem('utmParams') || '{}');
+    const form = document.getElementById('lead-form');
+    for (const [key, value] of Object.entries(utmParams)) {
+      if (!form.querySelector(`input[name="${key}"]`)) {
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.name = key;
+        hiddenInput.value = value;
+        form.appendChild(hiddenInput);
+      }
+    }
+  } catch (error) {
+    console.error('Error populating UTM parameters in the form:', error);
   }
 }
 
-// Handle form submission
 document.addEventListener('DOMContentLoaded', () => {
+  // Store UTM parameters
   storeUTMParameters();
+
+  // Populate UTM parameters into the form
   populateUTMParametersInForm();
 
+  // Handle form submission
   const form = document.getElementById('lead-form');
   form.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent actual form submission
 
+    // Collect form data
     const formData = new FormData(form);
     const data = {};
     formData.forEach((value, key) => {
       data[key] = value;
     });
 
+    // Merge with UTM parameters
     const utmParams = JSON.parse(localStorage.getItem('utmParams') || '{}');
     const finalData = { ...data, ...utmParams };
 
-    localStorage.setItem('formData', JSON.stringify(finalData));
-    alert('Form submitted successfully!');
-    form.reset();
+    try {
+      // Store in localStorage
+      localStorage.setItem('formData', JSON.stringify(finalData));
+      console.log('Form submitted successfully. Data:', finalData);
+
+      // Display a confirmation or reset the form
+      alert('Form submitted successfully!');
+      form.reset();
+    } catch (error) {
+      console.error('Error storing form data in localStorage:', error);
+      alert('There was an error saving the form data. Please try again.');
+    }
   });
 
-  // Horizontal scroll handling for desktop and mobile
   const scrollContainer = document.getElementById('scrollContainer');
 
   // For desktop (wheel event)
   scrollContainer.addEventListener('wheel', (e) => {
     if (e.deltaY !== 0) {
-      e.preventDefault();
+      e.preventDefault(); // Prevent default vertical scroll
       scrollContainer.scrollBy({
-        left: e.deltaY > 0 ? 100 : -100,
-        behavior: 'smooth',
+        left: e.deltaY > 0 ? 100 : -100, // Scroll 100px left or right
+        behavior: 'smooth'
       });
     }
   });
-
+  
   // For mobile (touch events)
   let startX;
+  
   scrollContainer.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
   });
-
+  
   scrollContainer.addEventListener('touchmove', (e) => {
     const touch = e.touches[0];
     const deltaX = startX - touch.clientX;
-
+  
     scrollContainer.scrollBy({
-      left: deltaX,
-      behavior: 'smooth',
+      left: deltaX, // Scroll by the difference in X coordinates
+      behavior: 'smooth'
     });
-
-    startX = touch.clientX;
+  
+    startX = touch.clientX; // Update startX for continuous scrolling
   });
+  
 
-  // Scroll tracker
+  // Handle scroll tracker
   const scrollTracker = document.getElementById('scrollTracker');
   const totalWidth = scrollContainer.scrollWidth - window.innerWidth;
   scrollContainer.addEventListener('scroll', () => {
