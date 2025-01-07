@@ -80,17 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Scroll horizontally when scrolling vertically
-  const scrollContainer = document.getElementById('scrollContainer');
-  scrollContainer.addEventListener('wheel', (e) => {
-    if (e.deltaY !== 0) {
-      e.preventDefault(); // Prevent default scroll behavior
-      scrollContainer.scrollBy({
-        left: e.deltaY > 0 ? 100 : -100, // Scroll 100px left or right
-        behavior: 'smooth'
-      });
-    }
-  });
+
+   // Scroll horizontally when scrolling vertically
+   const scrollContainer = document.getElementById('scrollContainer');
+   scrollContainer.addEventListener('wheel', (e) => {
+     if (e.deltaY !== 0) {
+       e.preventDefault(); // Prevent default scroll behavior
+       scrollContainer.scrollBy({
+         left: e.deltaY > 0 ? 100 : -100, // Scroll 100px left or right
+         behavior: 'smooth'
+       });
+     }
+   });
+
 
   // Handle scroll tracker
   const scrollTracker = document.getElementById('scrollTracker');

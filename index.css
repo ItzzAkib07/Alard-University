@@ -899,20 +899,18 @@ select {
     padding-right: 0;
   }
 
-
   .section-1 .part-1 h2{
     font-size: 32px;
   }
 
   .header {
     width: 30vw;
-    flex-grow: 1;
-    flex-shrink: 0;
   }
-
+  
 
   .section-2 .container {
     flex-direction: column !important;
+    flex-grow: 1;
     width: 60vh;
   }
 
@@ -924,28 +922,60 @@ select {
     align-items: flex-end;
   }
 
+  .section-3{
+    width: 200vw;
+  }
 
+  .section-3 .container {
+    width: 200vw;
+    flex-wrap: nowrap;
+  }
+  .section-3 .container .part-1 {
+    width: 100vw;
+  }
+  .section-3 .container .part-2{
+    width: 100vw;
+  }
+
+  .section-6{
+    width: 200vw;
+  }
+
+  .section-6 .container {
+    width: 200vw;
+    flex-wrap: nowrap;
+  }
+  .section-3 .container .part-1 {
+    width: 150vw;
+  }
+
+
+  #section-7{
+    width: 150vw;
+  }
 
   #section-7 .container{
     display: flex;
     flex-direction: column !important;
     align-items: flex-end;
     justify-content: flex-end;
-    gap: 0;
-  }
+    gap: 0;  }
 
   #section-7 .container .part-1{
     padding-left: 2%;
+    width: 100vw;
   }
+
   #section-7 .container .part-1 .sec-1{
     display: none;
   }
+
   #section-7 .container .part-1 .sec-2{
     width: 50%;
     margin-left: 2rem;
   }
-
 }
+
 
 /* Tablet (Landscape) */
 @media (min-width: 769px) and (max-width: 1024px) {
