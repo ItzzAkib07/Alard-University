@@ -80,17 +80,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Scroll horizontally when scrolling vertically
   const scrollContainer = document.getElementById('scrollContainer');
+
+  // For desktop (wheel event)
   scrollContainer.addEventListener('wheel', (e) => {
     if (e.deltaY !== 0) {
-      e.preventDefault(); // Prevent default scroll behavior
+      e.preventDefault(); // Prevent default vertical scroll
       scrollContainer.scrollBy({
         left: e.deltaY > 0 ? 100 : -100, // Scroll 100px left or right
         behavior: 'smooth'
       });
     }
   });
+  
+  // For mobile (touch events)
+  let startX;
+  
+  scrollContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+  
+  scrollContainer.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    const deltaX = startX - touch.clientX;
+  
+    scrollContainer.scrollBy({
+      left: deltaX, // Scroll by the difference in X coordinates
+      behavior: 'smooth'
+    });
+  
+    startX = touch.clientX; // Update startX for continuous scrolling
+  });
+  
 
   // Handle scroll tracker
   const scrollTracker = document.getElementById('scrollTracker');
